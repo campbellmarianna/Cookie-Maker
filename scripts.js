@@ -215,14 +215,11 @@ let planetMultiple = document.getElementById('planet-multiple');
 
 // buy a planet
 buyPlanet.addEventListener("click", function() {
-    console.log(`You pressed the button to buy a cookie planet. The value of the
-        cookieCount: ${cookieCount} and the value of the planetPriceAmount is ${planetPriceAmount} `)
     //set autoLoop to false
     planetAuto = false;
 
     // make sure we have enough cookies
     if (cookieCount >= planetPriceAmount) {
-        console.log("cookieCount is greater than or eqaul to the planetPriceAmount");
         cookieCount -= planetPriceAmount;
         refreshCookieCount()
 
@@ -232,7 +229,7 @@ buyPlanet.addEventListener("click", function() {
         // update price
         planetPriceAmount = Math.floor(planetPriceAmount * 1.33);
 
-        // update facility power
+        // update planet power
         planetPower += 600 + Math.floor(planetLevelNumber * 1.33);
 
         // turn autoFacility on!
