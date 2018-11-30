@@ -1,0 +1,24 @@
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    /* height: 100%; */
+    font-size: 18px;
+}
+
+.game-setup {
+    background: linear-gradient(rgba(44, 62, 80,.6), rgba(44, 62, 80,.6)), url('food-photographer-jennifer-pallian-306898-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    font-family: 'Roboto', sans-serif;
+    color: lightGray;
+    padding: 0 0 5px 5px;
+}

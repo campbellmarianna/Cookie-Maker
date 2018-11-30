@@ -3,8 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title>Make Cookies</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
-    <body>
+    <body class="game-setup">
         <h1 id="cookie-counter">0</h1>
         <button id="cookie-clicker">Make Cookies</button>
 
@@ -32,6 +34,13 @@
         <p>Producing <span id="facility-multiple">0</span> cookies per second!</p>
         <button id="buy-facility">Buy for <span id="facility-price">100000</span></button>
         <p>Level: <span id="facility-level">0</span></p>
+
+        <!--Cookie Planets-->
+        <hr>
+        <p>Cookie Planet</p>
+        <p>Producing <span id="planet-multiple">0</span> cookies per second!</p>
+        <button id="buy-planet">Buy for <span id="planet-price">500000</span></button>
+        <p>Level: <span id="planet-level">0</span></p>
 
         <!--Link to JavaScript file-->
         <script src="./scripts.js"></script>

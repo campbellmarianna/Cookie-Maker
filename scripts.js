@@ -82,7 +82,7 @@ let grandmaLevelNumber = 0;
 let grandmaAuto = false;
 
 //declare DOM variables
-let buyGrandma = document.getElementById('buy-grandma');
+let buyGrandma = document.getElementById('buy-grandma'); // button
 let grandmaPrice = document.getElementById('grandma-price');
 let grandmaLevel = document.getElementById('grandma-level');
 let grandmaMultiple = document.getElementById('grandma-multiple');
@@ -117,6 +117,7 @@ buyGrandma.addEventListener("click", function() {
 let refreshGrandma = function() {
     grandmaLevel.innerHTML = grandmaLevelNumber
     grandmaPrice.innerHTML = grandmaPriceAmount;
+    grandmaMultiple.innerHTML = grandmaPower;
     grandmaMultiple.innerHTML = grandmaPower - 10;
 }
 
@@ -141,7 +142,7 @@ let facilityLevelNumber = 0;
 
 // declare DOM variables
 let buyFacility = document.getElementById('buy-facility');
-let facilityPrice = document.getElementById('facility-priice');
+let facilityPrice = document.getElementById('facility-price');
 let facilityLevel = document.getElementById('facility-level');
 let facilityMultiple = document.getElementById('facility-multiple');
 
@@ -190,6 +191,76 @@ let refreshFacility = function() {
 let autoFacilityStart = function() {
     let facilityInt = window.setInterval(function() {
         cookieCount += facilityPower;
+        refreshCookieCount();
+    }, 1000);
+}
+
+/*******************************************************************************
+
+                                   Planets
+
+*******************************************************************************/
+
+// set default values
+let planetAuto = false;
+let planetPower = 3000;
+let planetPriceAmount = 500000;
+let planetLevelNumber = 0;
+
+// declare DOM variables
+let buyPlanet = document.getElementById('buy-planet');
+let planetPrice = document.getElementById('planet-price');
+let planetLevel = document.getElementById('planet-level');
+let planetMultiple = document.getElementById('planet-multiple');
+
+// buy a planet
+buyPlanet.addEventListener("click", function() {
+    console.log(`You pressed the button to buy a cookie planet. The value of the
+        cookieCount: ${cookieCount} and the value of the planetPriceAmount is ${planetPriceAmount} `)
+    //set autoLoop to false
+    planetAuto = false;
+
+    // make sure we have enough cookies
+    if (cookieCount >= planetPriceAmount) {
+        console.log("cookieCount is greater than or eqaul to the planetPriceAmount");
+        cookieCount -= planetPriceAmount;
+        refreshCookieCount()
+
+        // upgrade power level
+        planetLevelNumber += 1;
+
+        // update price
+        planetPriceAmount = Math.floor(planetPriceAmount * 1.33);
+
+        // update facility power
+        planetPower += 600 + Math.floor(planetLevelNumber * 1.33);
+
+        // turn autoFacility on!
+        planetAuto = true
+        autoPlanetStart();
+
+        //refresh shop item
+        refreshPlanet();
+
+        // game loop
+
+        // refreah shop
+
+    }//DONT FORGET THIS BRACKET
+
+})
+
+// refresh shop
+let refreshPlanet = function() {
+    planetLevel.innerHTML = planetLevelNumber
+    planetPrice.innerHTML = planetPriceAmount;
+    planetMultiple.innerHTML = planetPower - 600;
+}
+
+//game loop
+let autoPlanetStart = function() {
+    let planetInt = window.setInterval(function() {
+        cookieCount += planetPower;
         refreshCookieCount();
     }, 1000);
 }

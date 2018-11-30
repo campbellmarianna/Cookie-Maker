@@ -10,7 +10,7 @@ MVP-----------------------------------------------------------------------------
         - Increase our click power
         - Update how much cookies we are producing
   - *As a user, I can purchase Grandmas that increase my number of cookies automatically.
-  - *As a user, I can purchase Cookie Manufacutring Facilities that increase my number of cookies automatically.
+  - *As a user, I can purchase Cookie Manufacturing Facilities that increase my number of cookies automatically.
   - *As a user, I can upgrade my grandmas and facilities by purchasing more of them.
-
-Make Cookies
+  - As a user, I can purchase Cookie Planets that increase my number of cookies in large amounts automatically.
+  - As a user, I can upgrade my planets by purchasing more of them.
