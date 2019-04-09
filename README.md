@@ -1,4 +1,7 @@
 # Cookie Maker
+
+![Github](https://img.shields.io/github/languages/top/campbellmarianna/Cookie-Maker.svg)
+
 ![Make Cookies Project Image](makeCookieProjectImage.png)
 
 This app is a game that allows users to bake cookies by clicking a button. The user can increase the amount of cookies baked per click by buying click power. The user can increase the amount of cookies baked per second by buying Grandmas, cookie manufacturing facilities and cookie planets.
